@@ -1,0 +1,24 @@
+/* CSS Document */
+#red 
+{
+	background-color: red;
+}
+div.blue
+{
+	color:blue;
+}
+#red p
+{
+	font-weight: bold;
+}
+table
+{
+	border-spacing: 0;
+}
+
+table tr th {
+	border-spacing: 0;
+}
+table tr td {
+	border-spacing: 0;
+}

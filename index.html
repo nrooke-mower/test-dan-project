@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ To complete the following work ONLY edit the html between the HEAD tags. 
+ You have complete access to the internet if you need help.
+
+ CSS:
+   Create an external style sheet in the css directory.
+   1) Set the background color of the div with id=red, to red.
+   2) Set the text color of the element with class=blue, to blue.
+   3) Set the text "Make me Bold" to bold.
+   4) Remove all table and cell spacing 
+   
+ JS:
+   Create an external javascript file in the js directory.
+   Feel free to download and use any javascript library to help you complete your work.
+   JQuery has been included in the js directory, as this is our library of choice.
+   1) When the page loads set the even columns (in the body only) of the table to green (the columns with even numbers in them).
+   2) If the "Toggle Table Stripe" button is pressed it should alternate between setting the odd/even columns to  green.
+   3) Write a function that takes one parameter and returns a string of numbers from 1 to 100 separated by that parameter. (Ex: if param="," then it would return "1,2,3,5,6,7,8")
+	  -For multiples of three print "Three" instead of the number.
+	  -For the multiples of five print "Five" instead of the number.
+	  -For numbers which are multiples of both three and five print "Both".
+   4) If the "Run Counter" button is pressed it should run the function you created passing in the html from div with id=runCounter_sep (get the html using JS) as the parameter.
+      The button should take the returned results from the function and output them in the div with id=output. It should add the results to the beginning of the output div each time it is run with the following html added before the results:
+      "<h2>Results for run #:</h2>" where # is the number of times the function has been called.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Interview Test</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src='js/jquery.js'></script>
+    <script>
+	$(document).ready(function () {
+colorStripes(1);
+});
+	</script>
+    <script src='js/myFunctions.js' type="text/javascript"></script>
+  </head>
+  <!-- DO NOT EDIT HTML BELOW HERE -->
+  <body>
+    <div id="red">
+      <div>
+		<p>Make me Bold</p>
+        <div class="blue">Blue Text Color</div>
+		<p>Make me Bold</p>
+      </div>
+    </div>
+    <p>Not Bold</p>
+    <table>
+      <thead>
+		<tr>
+		  <th>A</th><th>B</th><th>C</th><th>D</th>
+		</tr>
+      </thead>
+      <tbody>
+		<tr>
+		  <td>11</td><td>12</td><td>13</td><td>14</td>
+		</tr>
+		<tr>
+		  <td>21</td><td>22</td><td>23</td><td>24</td>
+		</tr>
+		<tr>
+		  <td>31</td><td>32</td><td>33</td><td>34</td>
+		</tr>
+		<tr>
+		  <td>41</td><td>42</td><td>43</td><td>44</td>
+		</tr>
+		<tr>
+		  <td>51</td><td>52</td><td>53</td><td>54</td>
+		</tr>
+		<tr>
+		  <td>61</td><td>62</td><td>63</td><td>64</td>
+		</tr>
+      </tbody>
+    </table>
+    <hr/>
+    <button id="stripeToggle">Toggle Table Stripe</button>
+	<button id="runCounter">Run Counter</button>
+	<div id="runCounter_sep" style="display: none;"><br> </div>
+	<div id="output"></div>	
+  </body>
+</html>
